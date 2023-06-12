@@ -23,8 +23,8 @@ def get_all_data(data_path="data/data.xlsx"):
     # 4、设置训练集、测试集、验证集的比例；
     total_lines = len(content_list)
     train_lines = int(total_lines * 0.9)
-    test_lines = int(total_lines * 0.05)
-    val_lines = int(total_lines * 0.05)
+    test_lines = int(total_lines * 0.005)
+    val_lines = int(total_lines * 0.095)
 
     # 5、获取分片之后的数据列表；
     train_list = []
