@@ -49,7 +49,8 @@ python3 get_data.py
 
 ## 6 微调
 
-其中 `CUDA_VISIBLE_DEVICES=0,1` 表示使用双卡，单卡则替换为 `CUDA_VISIBLE_DEVICES=0`，其它数量以此类推。
+- 其中 `CUDA_VISIBLE_DEVICES=0,1` 表示使用双卡，单卡则替换为 `CUDA_VISIBLE_DEVICES=0`，其它数量以此类推。
+- 若输入和输出的语句较长，可以增大 `max_source_length` 和 `max_target_length` ，但注意是要2的倍数。
 ```bash
 CUDA_VISIBLE_DEVICES=0,1 && WANDB_DISABLED=true python3 main.py \
     --do_train \
