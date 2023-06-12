@@ -1,9 +1,14 @@
 import pandas as pd
 import json
 import random
+import argparse
+
+parser = argparse.ArgumentParser(description="此脚本的手册")
+parser.add_argument("--data_path", type=str, default="data/data.xlsx")
+args = parser.parse_args()
 
 
-def get_all_data(data_path="data/data.xlsx"):
+def get_all_data(data_path=args.data_path):
     # 1、读入xlsx文件，只能训练100w条数据，但应该够用了；
     df = pd.read_excel(data_path)
     prompts = df["prompt"].to_list()
