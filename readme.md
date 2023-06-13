@@ -79,7 +79,7 @@ CUDA_VISIBLE_DEVICES=0,1 && WANDB_DISABLED=true python3 main.py \
     --response_column response \
     --overwrite_cache \
     --model_name_or_path THUDM/chatglm-6b-int4 \
-    --output_dir output/chatglm-6b-int4-pt \
+    --output_dir output \
     --overwrite_output_dir \
     --max_source_length 64 \
     --max_target_length 64 \
