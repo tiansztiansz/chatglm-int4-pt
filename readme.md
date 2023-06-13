@@ -88,9 +88,9 @@ WANDB_DISABLED=true python3 main.py \
     --per_device_eval_batch_size 1 \
     --gradient_accumulation_steps 1 \
     --predict_with_generate \
-    --max_steps 500 \
-    --logging_steps 10 \
-    --save_steps 500 \
+    --max_steps 2000 \
+    --logging_steps 100 \
+    --save_steps 2000 \
     --learning_rate 2e-2 \
     --pre_seq_len 128 \
     --quantization_bit 4
@@ -104,6 +104,6 @@ WANDB_DISABLED=true python3 main.py \
 分类模型评估：
 ```bash
 python3 evaluate.py --model_path "THUDM/chatglm-6b-int4" \
-                    --save_steps "500"
+                    --save_steps "2000"
 ```
 
