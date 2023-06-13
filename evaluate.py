@@ -3,12 +3,13 @@ import torch
 import json
 import argparse
 
-parser = argparse.ArgumentParser(description="此脚本的手册")
+parser = argparse.ArgumentParser()
 parser.add_argument("--model_path", type=str, default="THUDM/chatglm-6b-int4")
 parser.add_argument("--save_steps", type=str, default="500")
 args = parser.parse_args()
 
-def load_pt_model(model_path = args.model_path, save_steps = args.save_steps):
+
+def load_pt_model(model_path=args.model_path, save_steps=args.save_steps):
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 
     # Fine-tuning 后的表现测试

@@ -28,7 +28,7 @@ git clone https://github.com/tiansztiansz/chatglm-int4-pt.git
 
 ### 2 进入项目目录
 ```bash
-cd chatglm-int4-pt/src
+cd chatglm-int4-pt
 ```
 
 <br>

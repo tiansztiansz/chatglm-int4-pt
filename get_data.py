@@ -3,7 +3,7 @@ import json
 import random
 import argparse
 
-parser = argparse.ArgumentParser(description="此脚本的手册")
+parser = argparse.ArgumentParser()
 parser.add_argument("--data_path", type=str, default="data/data.xlsx")
 args = parser.parse_args()
 
