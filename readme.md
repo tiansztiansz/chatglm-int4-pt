@@ -103,8 +103,7 @@ WANDB_DISABLED=true python3 main.py \
 ### 7 模型评估
 分类模型评估：
 ```bash
-python3 evaluate.py \ 
-    --model_path "THUDM/chatglm-6b-int4" \
-    --save_steps "500"
+python3 evaluate.py --model_path "THUDM/chatglm-6b-int4" \
+                    --save_steps "500"
 ```
 
