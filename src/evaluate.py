@@ -1,11 +1,9 @@
-# 加载模型
 from transformers import AutoTokenizer, AutoModel, AutoConfig
 import torch
 import json
 
 
-def load_pt_model():
-    model_path = "THUDM/chatglm-6b-int4"
+def load_pt_model(model_path = "THUDM/chatglm-6b-int4"):
     tokenizer = AutoTokenizer.from_pretrained(model_path, trust_remote_code=True)
 
     # Fine-tuning 后的表现测试
@@ -49,5 +47,5 @@ def cls_accuracy(model, tokenizer):
 
 
 if __name__ == "__main__":
-    model, tokenizer = load_pt_model()
+    model, tokenizer = load_pt_model(model_path = "THUDM/chatglm-6b-int4")
     cls_accuracy(model, tokenizer)
