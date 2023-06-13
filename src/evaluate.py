@@ -16,7 +16,7 @@ def load_pt_model():
 
     # 此处使用你的 ptuning 工作目录
     prefix_state_dict = torch.load(
-        "output/chatglm-6b-int4-pt/checkpoint-500/pytorch_model.bin"
+        "output/checkpoint-500/pytorch_model.bin"
     )
     new_prefix_state_dict = {}
     for k, v in prefix_state_dict.items():
