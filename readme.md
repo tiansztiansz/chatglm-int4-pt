@@ -68,10 +68,11 @@ python3 get_data.py --data_path "data/data.xlsx"
 
 ### 6 微调
 
-- 其中 `CUDA_VISIBLE_DEVICES=0,1` 表示使用双卡，单卡则替换为 `CUDA_VISIBLE_DEVICES=0`，其它数量以此类推。
 - 若输入和输出的语句较长，可以增大 `max_source_length` 和 `max_target_length` ，但注意是要2的倍数。
+- 若微调效果不好，则可以适当增大 `max_steps` 和 `save_steps`
+- 对于多卡微调，该脚本似乎已经自动分配到多卡
 ```bash
-CUDA_VISIBLE_DEVICES=0,1 && WANDB_DISABLED=true python3 main.py \
+WANDB_DISABLED=true python3 main.py \
     --do_train \
     --train_file data/train.json \
     --validation_file data/val.json \
