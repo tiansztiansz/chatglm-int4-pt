@@ -46,7 +46,7 @@ def cls_accuracy(model, tokenizer):
                 true_num = true_num + 1
 
     accuracy = true_num / total_num
-    print("在分类任务中模型准确率为：{}".format(accuracy))
+    print(f"在分类任务中模型准确率为：{accuracy}")
 
 
 if __name__ == "__main__":
