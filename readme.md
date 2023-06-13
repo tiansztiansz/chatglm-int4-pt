@@ -45,7 +45,7 @@ pip install datasets rouge_chinese transformers==4.27.1 cpm_kernels sentencepiec
 将所有待微调的数据按以下格式整理好，并将语料人工核对，这样才能保证微调后的模型更好
 
 `data/data.xlsx`
-| prompt | response |
+| *prompt* | *response* |
 |---|---|
 | 指令1 | 回复1|
 | 指令2 | 回复2 |
