@@ -71,6 +71,7 @@ python3 get_data.py --data_path "data/data.xlsx"
 - 若输入和输出的语句较长，可以增大 `max_source_length` 和 `max_target_length` ，但注意是要2的倍数。
 - 若微调效果不好，则可以适当增大 `max_steps` 和 `save_steps`
 - 对于多卡微调，该脚本似乎已经自动分配到多卡
+- 若想微调其它版本的模型，可以将 `THUDM/chatglm-6b-int4` 更改为 `THUDM/chatglm-6b-int8` 或者 `THUDM/chatglm-6b`
 ```bash
 WANDB_DISABLED=true python3 main.py \
     --model_name_or_path THUDM/chatglm-6b-int4 \
@@ -102,6 +103,8 @@ WANDB_DISABLED=true python3 main.py \
 
 ### 7 模型评估
 分类模型评估：
+- 若想评估其它版本的模型，可以将 `THUDM/chatglm-6b-int4` 更改为 `THUDM/chatglm-6b-int8` 或者 `THUDM/chatglm-6b`
+- 若想评估其他步长的模型，请将 `3000` 改为对应的步长
 ```bash
 python3 evaluate.py --model_path "THUDM/chatglm-6b-int4" \
                     --save_steps "3000"
